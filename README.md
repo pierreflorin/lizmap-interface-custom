@@ -25,6 +25,7 @@ Copier les fichiers `.js` et `.css` dans le dossier de configuration de votre pr
 
 
 ## Capture d'écran
+![newInterface_custom](https://github.com/user-attachments/assets/ec4c710d-477a-475c-958a-cddbee5a2c01)
 
 
 ## Contributions bienvenues
