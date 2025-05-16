@@ -1,0 +1,1508 @@
+ #map {
+
+    user-select: none;
+
+    -moz-user-select: none;
+
+    -khtml-user-select: none;
+
+    -webkit-user-select: none;
+
+    -o-user-select: none;
+
+}
+
+
+
+body {
+
+    padding-top: 0px !important;
+
+    font-family: policeSNCF;
+
+}
+
+
+
+@font-face {
+
+    font-family: "policeSNCF";
+
+    src: url(fonts/AvenirLTStd-Roman.otf) format('truetype');
+
+}
+
+
+
+.nav-list {
+
+    display: flex !important;
+
+    gap: 0.6rem;
+
+    align-items: center;
+
+    padding-left: 0px;
+
+    padding-right: 0px;
+
+}
+
+
+
+.nav-list > li {
+
+    display: table-cell;
+
+    height: 31px;
+
+    min-width: 31px;
+
+    text-align: -webkit-center;
+
+    background-color: #A1006B;
+
+    border-radius: 15px;
+
+    vertical-align: middle;
+
+    border-spacing: 0px;
+
+    text-align: center;
+
+}
+
+
+
+.nav-list > li > a {
+
+    display: inherit;
+
+    margin-right: 0px;
+
+    margin-left: 0px;
+
+    padding: 0px 0px !important;
+
+    vertical-align: middle !important;
+
+    width: 31px !important;
+
+    height: 31px !important;
+
+    background-color: #A1006B !important;
+
+    border-radius: 10px !important;
+
+    text-align: center;
+
+}
+
+
+
+.nav-list > li > a:hover {
+
+    background-color: #c9c9c9 !important;
+
+}
+
+
+
+
+
+
+
+
+
+#mapmenu {
+
+    height: 45px;
+
+    width: 100%;
+
+    background: transparent !important;
+
+    z-index: 1011;
+
+}
+
+
+
+#mapmenu > div:nth-child(2) {
+
+    width: 150px;
+
+    justify-content: center;
+
+    position: absolute;
+
+    color: white;
+
+    font-size: x-large;
+
+    overflow: hidden;
+
+    left: 50px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin: 5px 0px;
+
+    background-color: #A1006B;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+
+
+#mapmenu > div:nth-child(3) {
+
+    position: absolute !important;
+
+    right: 40px !important;
+
+    left: auto !important;
+
+    width: auto !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    height: 35px !important;
+
+    margin: 5px 0 !important;
+
+    background-color: white !important;
+
+    border-radius: 10px !important;
+
+    padding: 0 20px !important;
+
+    gap: 0.6rem !important;
+
+}
+
+
+
+#navbar {
+
+    top: 60px;
+
+}
+
+
+
+#docks-wrapper {
+
+    left: 0px;
+
+}
+
+
+
+#dock,
+
+#mini-dock,
+
+#sub-dock {
+
+    top: 45px;
+
+    max-width: 30%;
+
+    border-radius: 0px 10px 10px 0px;
+
+    height: auto !important;
+
+    max-height: 80vh !important; /* Pour éviter qu’il dépasse trop en cas de contenu très long */
+
+    overflow-y: auto !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+
+
+}
+
+
+
+#right-dock {
+
+    right: -30px;
+
+    top: 30px;
+
+}
+
+
+
+#right-dock-content {
+
+    height: calc(100% - 70px);
+
+}
+
+
+
+#map-content {
+
+    margin-left: 0px;
+
+}
+
+
+
+#mini-dock {
+
+    top: 45px;
+
+}
+
+
+
+#switcher .treeTable tr.liz-layer td span.label {
+
+    color: #f8f8f8 !important;
+
+}
+
+
+
+#switcher .treeTable tr.collapsed td a.expander {
+
+    background-position: -32px -32px !important;
+
+}
+
+
+
+#dock .tree button.checkbox {
+
+    background-color: white;
+
+}
+
+
+
+input[type="checkbox"]:checked {
+
+    accent-color: #A1006B;
+
+}
+
+
+
+.baselayer {
+
+    background-color: #A1006B;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    border: solid 1px;
+
+}
+
+
+
+#switcher-baselayer > .menu-content {
+
+    border-radius: 0px 0px 10px 10px;
+
+    overflow: hidden !important;
+
+}
+
+
+
+#docks-wrapper > #sub-dock {
+
+    border-radius: 10px;
+
+    background: #A1006B !important;
+
+    border: solid 1px;
+
+    margin-top: 50px;
+
+}
+
+
+
+.menu-content {
+
+    background-color: #f8f8f8 !important;
+
+    border-radius: 0 0 10px 10px !important;
+
+    border: 1px solid #ccc !important;
+
+    border-top: none !important;
+
+}
+
+
+
+#dock-close {
+
+    display: block !important;
+
+    color: white !important;
+
+    background-color: transparent !important;
+
+    border: none !important;
+
+    font-size: 20px !important;
+
+}
+
+
+
+#toolbar h3,
+
+#menu h3,
+
+#dock h3,
+
+#sub-dock h3,
+
+#mini-dock h3,
+
+#right-dock h3,
+
+div.modal h3,
+
+.dock-subtitle {
+
+    color: white !important;
+
+}
+
+
+
+#dock-tabs > li > a,
+
+#right-dock-tabs > li > a,
+
+#bottom-dock-tabs > li > a {
+
+    color: white !important;
+
+}
+
+
+
+#dock-tabs > li > a i,
+
+#right-dock-tabs > li > a i,
+
+#bottom-dock-tabs > li > a i {
+
+    color: white !important;
+
+    filter: brightness(1000%) !important;
+
+}
+
+
+
+.lizmapPopupDiv {
+
+    border-radius: 10px;
+
+}
+
+
+
+.btn.btn-mini.popup-layer-feature-select,
+
+.btn.btn-mini.popup-layer-feature-filter,
+
+.fentre_resultat .btn.btn-mini.popup-layer-feature-bbox-zoom {
+
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-trash {
+
+    filter: invert(19%) sepia(74%) saturate(7457%) hue-rotate(359deg) brightness(94%) contrast(122%);
+
+}
+
+
+
+.icon-pencil {
+
+    filter: invert(41%) sepia(100%) saturate(1730%) hue-rotate(15deg) brightness(95%) contrast(101%);
+
+}
+
+
+
+.icon-th-large {
+
+    filter: invert(37%) sepia(72%) saturate(4845%) hue-rotate(180deg) brightness(99%) contrast(101%);
+
+}
+
+
+
+.tab-content {
+
+    scrollbar-color: #cecece #ececec;
+
+}
+
+
+
+#navbar button.btn {
+
+    border-radius: 8px;
+
+}
+
+
+
+#lizmap-search.open {
+
+    top: 31px;
+
+    right: 254px;
+
+}
+
+
+
+#message {
+
+    top: 5px;
+
+    overflow: hidden;
+
+}
+
+
+
+.tblbord > .menu-content {
+
+    max-height: 100% !important;
+
+}
+
+
+
+#overview-box {
+
+    text-align: right;
+
+    bottom: 45px;
+
+}
+
+
+
+/* Ajustement des boutons pour qu'ils soient parfaitement ronds */
+
+.nav-list > li > a {
+
+    display: flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 34px !important;
+
+    height: 34px !important;
+
+    border-radius: 50% !important;
+
+    background-color: #A1006B !important;
+
+    text-align: center;
+
+    padding: 0 !important;
+
+}
+
+
+
+/* Centrage vertical et horizontal de l'icône */
+
+.nav-list > li > a .icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+
+.nav-list > li > a .icon i {
+
+    margin: 0 !important;
+
+    font-size: 16px !important;
+
+    color: white !important;
+
+}
+
+
+
+/* Barre de menu flottante moderne */
+
+#mapmenu > div:nth-child(3) {
+
+    position: fixed !important;
+
+    top: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex !important;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 2rem;
+
+    padding: 0.5rem 1.5rem;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    gap: 1rem;
+
+    z-index: 3000;
+
+    border: 1px solid #e0e0e0;
+
+}
+
+
+
+/* Boutons circulaires avec effets */
+
+.nav-list {
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+}
+
+
+
+.nav-list > li {
+
+    background: transparent !important;
+
+    border-radius: 50%;
+
+}
+
+
+
+.nav-list > li > a {
+
+    display: flex !important;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 38px !important;
+
+    height: 38px !important;
+
+    border-radius: 50% !important;
+
+    background: linear-gradient(145deg, #A1006B, #870056) !important;
+
+    color: white !important;
+
+    font-size: 16px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    text-decoration: none;
+
+}
+
+
+
+.nav-list > li > a:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+
+    background: linear-gradient(145deg, #870056, #A1006B) !important;
+
+}
+
+
+
+.nav-list > li > a .icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+.nav-list > li > a .icon i {
+
+    color: white !important;
+
+    font-size: 16px;
+
+    margin: 0 !important;
+
+}
+
+
+
+/* Masquer les libellés textuels */
+
+.nav-list > li > a .menu-title {
+
+    display: none !important;
+
+}
+
+
+
+/* Conserver le fond gris clair lorsque le bouton est actif ou sélectionné */
+
+.nav-list > li.active > a,
+
+.nav-list > li > a:focus,
+
+.nav-list > li > a:active {
+
+    background-color: #c9c9c9 !important;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+
+    transform: none !important;
+
+}
+
+
+
+/* Forcer un fond gris permanent sur les boutons actifs */
+
+.nav-list > li.active > a,
+
+.nav-list > li > a:focus,
+
+.nav-list > li > a:active {
+
+    background: #c9c9c9 !important;
+
+    color: white !important;
+
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1) !important;
+
+    transform: none !important;
+
+}
+
+
+
+/* Style général compact et discret */
+
+#auth {
+
+    position: fixed !important;
+
+    top: 0 !important; /* Collé au bord haut */
+
+    right: 20px;
+
+    z-index: 5000;
+
+    background: #DDE6F0;
+
+    padding: 2px 8px !important;
+
+    border-radius: 0 0 6px 6px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    font-size: 0.85rem;
+
+    line-height: 1;
+
+}
+
+
+
+
+
+/* Réduction du champ de recherche */
+
+#nominatim-search input {
+
+    height: 15px !important;
+
+    font-size: 0.85rem !important;
+
+    padding: 2px 6px;
+
+    color: #000 !important;
+
+}
+
+
+
+/* Désactivation du changement de couleur au survol */
+
+#auth a,
+
+#auth a:hover,
+
+#auth a:active,
+
+#auth a:focus {
+
+    color: #000 !important;
+
+    text-decoration: none !important;
+
+    background: none !important;
+
+    box-shadow: none !important;
+
+}
+
+
+
+/* Icônes noires sans effet de filtre */
+
+#auth .icon {
+
+    filter: none !important;
+
+    color: #000 !important;
+
+}
+
+
+
+/* Réduction de la taille des éléments du menu utilisateur */
+
+#auth .nav > li > a {
+
+    padding: 2px 6px !important;
+
+    font-size: 0.85rem !important;
+
+}
+
+
+
+/* Réduction de l'icône utilisateur + administration */
+
+#auth .icon,
+
+#auth .dashboard-icon {
+
+    font-size: 10px !important;
+
+    margin-right: 4px;
+
+}
+
+#auth .dashboard-item {
+
+    display: none !important;
+
+}
+
+
+
+#header-clear {
+
+    display: none !important;
+
+}
+
+/* Contenu initial manquant, insérer ici le CSS de base */
+
+/* Style amélioré pour le sélecteur locate-layer */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.75rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Champ de recherche du locate-layer (champ visible en auto-complétion) */
+.custom-combobox-input {
+  min-width: 320px !important;
+  max-width: 100% !important;
+  padding: 6px 12px !important;
+  font-size: 0.95rem !important;
+  border-radius: 10px 0 0 10px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* Bouton déroulant du locate-layer */
+.custom-combobox-toggle {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 0 10px 10px 0 !important;
+  background-color: #A1006B !important;
+  border: 1px solid #ccc !important;
+  border-left: none !important;
+  cursor: pointer;
+}
+
+/* Icône du bouton (triangle, flèche, etc.) */
+.custom-combobox-toggle::after {
+  content: "\25BC";
+  display: block;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 36px;
+}
+
+/* Style corrigé et réduit pour le sélecteur locate-layer */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.5rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Champ de recherche du locate-layer (champ visible en auto-complétion) */
+.custom-combobox-input {
+  min-width: 260px !important;
+  max-width: 100% !important;
+  height: 28px !important;
+  padding: 4px 10px !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px 0 0 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: none !important;
+  line-height: 1.2;
+}
+
+/* Bouton déroulant du locate-layer */
+.custom-combobox-toggle {
+  width: 32px !important;
+  height: 28px !important;
+  border-radius: 0 8px 8px 0 !important;
+  background-color: #A1006B !important;
+  border: 1px solid #ccc !important;
+  border-left: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Supprimer flèche CSS potentiellement conflictuelle */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Style révisé pour locate-layer avec flèche centrée et grise */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.5rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Champ de recherche auto-complétion */
+.custom-combobox-input {
+  min-width: 260px !important;
+  max-width: 100% !important;
+  height: 32px !important;
+  padding: 4px 10px !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px 0 0 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  line-height: 1.2;
+  box-shadow: none !important;
+}
+
+/* Bouton flèche intégré et centré en hauteur, fond gris */
+.custom-combobox-toggle {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 0 8px 8px 0 !important;
+  background-color: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  border-left: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+/* Ajout d'une icône flèche ▼ au centre */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 12px;
+  color: #555;
+  line-height: 1;
+}
+
+/* Supprimer éventuelles flèches conflictuelles */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Style affiné pour locate-layer */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.4rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Champ de recherche (plus bas et plus fin) */
+.custom-combobox-input {
+  min-width: 240px !important;
+  max-width: 100% !important;
+  height: 26px !important;
+  padding: 2px 10px !important;
+  font-size: 0.8rem !important;
+  border-radius: 8px 0 0 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: none !important;
+  line-height: 1.2;
+}
+
+/* Bouton flèche ajusté pour être parfaitement centré verticalement */
+.custom-combobox-toggle {
+  width: 28px !important;
+  height: 26px !important;
+  border-radius: 0 8px 8px 0 !important;
+  background-color: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  border-left: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Flèche visuelle centrée légèrement plus bas */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 1px;
+}
+
+/* Supprimer autres flèches CSS */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Style affiné pour locate-layer */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.4rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Champ de recherche "Département" plus fin */
+.custom-combobox-input {
+  min-width: 240px !important;
+  max-width: 100% !important;
+  height: 24px !important;
+  padding: 2px 8px !important;
+  font-size: 0.8rem !important;
+  border-radius: 8px 0 0 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: none !important;
+  line-height: 1.2;
+}
+
+/* Bouton flèche avec alignement plus bas */
+.custom-combobox-toggle {
+  width: 28px !important;
+  height: 24px !important;
+  border-radius: 0 8px 8px 0 !important;
+  background-color: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  border-left: none !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center;
+  padding-bottom: 2px !important;
+}
+
+/* Flèche descendue de quelques pixels */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 3px; /* descend plus la flèche */
+}
+
+/* Supprimer autres flèches CSS */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Conteneur locate-layer sans contour noir */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.4rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Champ de recherche avec icône flèche intégrée */
+.custom-combobox-input {
+  min-width: 240px !important;
+  max-width: 100% !important;
+  height: 28px !important;
+  padding: 2px 32px 2px 10px !important; /* espace à droite pour la flèche */
+  font-size: 0.85rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: none !important;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23555' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px 16px;
+}
+
+/* Cacher le bouton toggle qui était à part */
+.custom-combobox-toggle {
+  display: none !important;
+}
+
+/* Conteneur locate-layer sans contour noir */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.4rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Champ de recherche "Département" simple et arrondi */
+.custom-combobox-input {
+  min-width: 240px !important;
+  max-width: 100% !important;
+  height: 28px !important;
+  padding: 2px 10px !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: none !important;
+  line-height: 1.2;
+}
+
+/* Bouton déroulant flèche affiché juste à côté du champ */
+.custom-combobox-toggle {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  background-color: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 !important;
+}
+
+/* Affichage de la flèche ▼ */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 0;
+}
+
+/* Supprimer flèche conflictuelle par défaut */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Conteneur locate-layer sans contour noir */
+.locate-layer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.4rem !important;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Champ de recherche "Département" */
+.custom-combobox-input {
+  min-width: 240px !important;
+  max-width: 100% !important;
+  height: 28px !important;
+  padding: 2px 10px !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  color: #333;
+  box-shadow: none !important;
+  line-height: 1.2;
+}
+
+/* Bouton flèche avec flèche plus basse */
+.custom-combobox-toggle {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  background-color: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center;
+  cursor: pointer;
+  padding-bottom: 2px !important;
+}
+
+/* Ajustement vertical de la flèche */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 4px; /* abaissé davantage pour correspondre visuellement */
+}
+
+/* Supprimer flèche CSS par défaut */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Flèche descendue encore plus bas */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 9px; /* abaissée de 5px supplémentaires */
+}
+
+/* Forcer désalignement naturel du parent */
+.custom-combobox-toggle {
+  align-items: flex-start !important;
+  padding-top: 12px !important; /* simule une flèche plus basse */
+  height: 28px !important;
+  display: flex !important;
+  justify-content: center;
+  border-radius: 6px !important;
+  background-color: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  cursor: pointer;
+}
+
+/* Flèche clairement plus basse (version radicale) */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 8px;
+}
+
+/* Bouton flèche plus petit, fond blanc et sans séparation visible */
+.custom-combobox-toggle {
+  width: 24px !important;
+  height: 24px !important;
+  padding-top: 8px !important;
+  background-color: white !important;
+  border: none !important;
+  margin-left: -4px !important; /* chevauche légèrement le champ pour éliminer la ligne */
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center;
+  border-radius: 0 6px 6px 0 !important;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+/* Flèche bien alignée en bas */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 7px;
+}
+
+/* Supprimer les pseudo-éléments inutiles */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Cache le <select> natif qui provoque l'affichage de la flèche par défaut */
+.locate-layer select.label {
+  display: none !important;
+}
+
+/* Suppression de l'apparence native du champ (flèche par défaut OS/Browser) */
+.custom-combobox-input {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+  background-color: white !important;
+}
+
+/* Correction du bouton flèche stylisé */
+.custom-combobox-toggle {
+  width: 24px !important;
+  height: 24px !important;
+  padding-top: 8px !important;
+  background-color: white !important;
+  border: none !important;
+  margin-left: -4px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center;
+  border-radius: 0 6px 6px 0 !important;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+/* Flèche descendue */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 7px;
+}
+
+/* Supprimer les conflits */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Cacher totalement le <select> d'origine */
+.locate-layer select.label {
+  visibility: hidden !important;
+  position: absolute !important;
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  appearance: none !important;
+}
+
+/* Supprimer les flèches par défaut du champ custom */
+.custom-combobox-input {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+  background-color: white !important;
+  border-radius: 8px !important;
+}
+
+/* Bouton flèche personnalisé réduit et sans contour */
+.custom-combobox-toggle {
+  width: 24px !important;
+  height: 24px !important;
+  padding-top: 8px !important;
+  background-color: white !important;
+  border: none !important;
+  margin-left: -4px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center;
+  border-radius: 0 6px 6px 0 !important;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+/* Flèche descendue alignée */
+.custom-combobox-toggle::before {
+  content: "▼";
+  font-size: 11px;
+  color: #555;
+  position: relative;
+  top: 8px;
+}
+
+/* Supprimer toute autre flèche potentielle */
+.custom-combobox-toggle::after {
+  content: none !important;
+}
+
+/* Déplacer la locate-layer légèrement vers le haut */
+.locate-layer {
+  margin-top: -18px !important; /* Monte la barre de recherche d’environ 0.5 cm */
+}
+
+/* Ajuster la position de la flèche si besoin */
+.custom-combobox-toggle::before {
+  top: 8px;
+}
+
+/* Réinitialiser la position verticale */
+.locate-layer {
+  margin-top: 8px !important;
+}
+
+/* Réduire la hauteur du champ */
+.custom-combobox-input {
+  height: 22px !important;
+  font-size: 0.78rem !important;
+  padding: 1px 8px !important;
+}
+
+/* Ajustement du bouton flèche */
+.custom-combobox-toggle {
+  height: 22px !important;
+  width: 22px !important;
+  padding-top: 4px !important;
+}
+
+/* Recentrer légèrement la flèche */
+.custom-combobox-toggle::before {
+  top: 6px;
+}
+
+/* Décalage très léger de la barre de recherche vers le haut */
+.locate-layer {
+  margin-top: -10px !important;
+}
